@@ -26,6 +26,16 @@
     // Seleciona o botão e a div pelo ID
 
     // 1ª Digitação (Aqui)
+const button = document.querySelector("#myButton");
+const div = document.querySelector("#myDiv");
+
+button.addEventListener('click', () => {
+  if  (div.style.backgroundColor === 'lightblue') {
+    div.style.backgroundColor = 'lightcoral';
+  } else { 
+    div.style.backgroundColor = 'lightblue';
+  }
+});
 
     // Adiciona um evento de clique ao botão
 

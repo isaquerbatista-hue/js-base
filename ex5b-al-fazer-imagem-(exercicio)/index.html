@@ -62,15 +62,30 @@
     <p id="myText">Passe o mouse sobre a imagem</p>
 
     <!-- Texto adicional -->
-    <p class="subtext" id="subText">Sabrina Carpenter - Linda!</p>
+    <p class="subtext" id="subText">Sabrina Carpenter - Linda!</p>        
   </div>
 
   <!-- Script JavaScript embutido na página -->
   <script>
 
+const image = document.querySelector('#myImage');
+const text = document.querySelector('#myText')
+const subtext = document.querySelector('#subText')
 
-    // 1ª Digitação (Resolva aqui o exercício)
+const imagemOriginal = 'image.png';
+const imagemAlternativa = 'image2.png';
 
+image.addEventListener('mouseover', () => {
+  image.src = imagemAlternativa;
+  text.textContent = 'Imagem Alterada';
+  subText.textContent = 'Doja Cat - Little Cat';
+})
+
+image.addEventListener('mouseout', () => {
+  img.src = imagemOriginal;
+  text.textContent = 'Imagem Original';
+  subText.textContent = 'Doja Cat - Little Cat';
+})
 
   </script>
 </body>
