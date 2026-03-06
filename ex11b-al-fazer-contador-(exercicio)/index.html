@@ -56,8 +56,24 @@
       "Não importa o quão devagar você vá, desde que você não pare. – Confúcio"
     ];
 
-       // 1ª Digitação (Resolva aqui o exercício)
+    // Seleciona o botão com id 'newQuoteButton' do HTML
+    const botao = document.getElementById('newQuoteButton');
+    
+    // Seleciona o parágrafo com id 'quote' onde as citações serão exibidas
+    const paragrafo = document.getElementById('quote');
 
+    // Adiciona um evento de clique ao botão
+    botao.addEventListener('click', function() {
+      // Gera um número aleatório entre 0 e (quantidade de citações - 1)
+      // Math.random() gera número de 0 a 0.999...
+      // Multiplicado pela quantidade de itens no array
+      // Math.floor() arredonda para baixo, garantindo um índice válido
+      const aleatorio = Math.floor(Math.random() * quotes.length);
+      
+      // Atribui a citação aleatória ao texto do parágrafo
+      // textContent substitui o conteúdo anterior pelo novo
+      paragrafo.textContent = quotes[aleatorio];
+    });
 
   </script>
 </body>
